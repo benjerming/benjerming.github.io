@@ -18,3 +18,5 @@ nav:
   - 使用本主题: https://www.mkdocs.org/user-guide/writing-your-docs/
 
 copyright: Copyright &copy; 2022~2024 hollin/All Rights Reserved. # 左下角的版权声明
+theme:
+  name: material #主题
