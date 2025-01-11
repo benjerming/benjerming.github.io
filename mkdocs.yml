@@ -1,1 +1,20 @@
-site_name: My Docs
+#[Info]
+site_name: 本杰明 #your site name 显示在左上角
+site_url: https://benjerming.github.io/
+site_author: you Name # your name
+
+# [Navigtion]
+nav:
+  # - 主页: index.md
+  - HOME页: index.md
+ 
+  - 标签: tag.md
+  - 留言板: liuyanban.md
+  - 友链:
+      - 友链: about/link.md
+  - 关于:
+      - 作者简介: about/author.md
+      - 项目简介: about/project.md
+  - 使用本主题: https://www.mkdocs.org/user-guide/writing-your-docs/
+
+copyright: Copyright &copy; 2022~2024 hollin/All Rights Reserved. # 左下角的版权声明
