@@ -23,4 +23,4 @@ nav:
 
 copyright: Copyright &copy; 2022~2024 hollin/All Rights Reserved. # 左下角的版权声明
 theme:
-  name: material #主题
+  name: readthedocs #主题
