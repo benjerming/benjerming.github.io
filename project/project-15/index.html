@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="benjerming" /><link rel="canonical" href="https://benjerming.github.io/project/project-15/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>项目风险管理 - 我的博客</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u9879\u76ee\u98ce\u9669\u7ba1\u7406";
+        var mkdocs_page_input_path = "project/project-15.md";
+        var mkdocs_page_url = "/project/project-15/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> 我的博客
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../android_dl/">Android中动态库加载依赖的方式</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../android_studio_integrate_cmake/">AndroidStusio集成CMake</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../deprecated_debug_pdf2docx/">pdf2docx数据处理流程</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../deprecated_merge_mupdf_2_zjpdf/">合并mupdf和zjpdf</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../deprecated_mupdf_pymupdf_pdf2docx_upgrade/">mupdf_pymupdf_pdf2docx升级</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../project_review/">项目上线回溯总结</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tesseract_ocr/">Tesseract ocr</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../todo/">待办事项列表</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/author/">我们</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/project/">项目介绍</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Project</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">项目风险管理</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project-16/">采购管理</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">我的博客</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Project</li>
+      <li class="breadcrumb-item active">项目风险管理</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h4 id="151">15.1 风险管理概述</h4>
+<blockquote>
+<p>风险无处不在 </p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">项目风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><em>项目风险</em> <br> &nbsp;&nbsp;&nbsp;&nbsp;   1. 是一种不确定的事件或条件，<br> &nbsp;&nbsp;&nbsp;&nbsp;  2. 一旦发生，会对项目目标产生某种正面或负面C的影响项目风险既包括对项目目标的威胁，也包括促进项目目标的机会。</td>
+</tr>
+<tr>
+<td style="text-align: left;">已知风险是那些已经经过识别和分析的风险，对于已知风险，对其进行规划，寻找应对方案是可行的;虽然项目经理们可以依据以往类似项目的经验，采取一般的应急措施处理未知风险，但未知风险是无法管理的。</td>
+</tr>
+<tr>
+<td style="text-align: left;">风险源于所有项目之中的不确定因素。项目在不同阶段会有不同的风险。风险会随着项目的进展而变化，不确定性也会着项目进展而逐渐减少。</td>
+</tr>
+<tr>
+<td style="text-align: left;">项目风险管理的目的在于降低风险不利影响，提高项目成功的可能性</td>
+</tr>
+<tr>
+<td style="text-align: left;">每个项目都在两个层面上存在风险:一是每个项目都有会影响项目达成目标的单个风险 二是由单个风险和不确定性的其他来源联合导致的整体项目风险。项目风险管理过程同时兼顾这两个层面的风险。</td>
+</tr>
+<tr>
+<td style="text-align: left;">项目风险会对项目目标产生负面或正面的影响，也就是风险与机会。项目风险管理旨在利用或强化正面风险(机会)，规避或减轻负面风险(威胁)。负面风险可能会引发各种问题 ，如工期延误、成本超支、绩效不佳或声誉受损等。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="152">15.2 风险过程概述</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">规划风险</td>
+<td style="text-align: left;">识别风险</td>
+<td style="text-align: left;">实施定性风险分析</td>
+<td style="text-align: left;">实施定量风险分析</td>
+<td style="text-align: left;">规划风险应对</td>
+<td style="text-align: left;">实施风险应对</td>
+<td style="text-align: left;">监督风险</td>
+</tr>
+</tbody>
+</table>
+<h4 id="153">15.3 规划风险</h4>
+<ul>
+<li><strong>定义</strong>: 规划风险管理是定义如何实施项目风险管理活动的过程</li>
+<li><strong>主要作用</strong>: 确保风险管理的水平、方法和可见度与项目风险程度相匹配，与对组织和其他干系人的重要程度相匹配。</li>
+</ul>
+<!-- <u>**输入**</u> -->
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类目</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>输入</strong></td>
+<td style="text-align: left;">项目章程 项目管理计划 项目文件 事业环境因素 组织过程资产</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>输出</strong></td>
+<td style="text-align: left;"><strong>风险管理计划</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>技术</strong></td>
+<td style="text-align: left;">专家判断 数据分析 会议</td>
+</tr>
+</tbody>
+</table>
+<h4 id="154">15.4 识别风险</h4>
+<ul>
+<li><strong>定义</strong>: 识别风险是识别单个项目风险和不确定性的其他来源[整体项目风险] 并记录风险特征的过程。</li>
+<li><strong>主要作用</strong>: <ol>
+<li>记录现有的单个项目风险，以及整体项目风险的来源</li>
+<li>汇总相关信息，以便项目团队能够恰当地应对已识别的风险。本过程应在整个项目期间开展</li>
+</ol>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类目</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>输入</strong></td>
+<td style="text-align: left;">项目管理计划 项目文件 采购文档 协议 事业环境因素 组织过程资产</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>输出</strong></td>
+<td style="text-align: left;"><strong>风险登记册</strong> <strong>风险报告</strong> 项目文件更新</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>技术</strong></td>
+<td style="text-align: left;">专家判断 数据收集 数据分析 人际关系与团队技能 <strong>提示清单</strong> 会议</td>
+</tr>
+</tbody>
+</table>
+<h4 id="155">15.5 实施定性风险分析</h4>
+<ul>
+<li><strong>定义</strong>: 实施定性风险分析是通过评估单个项目风险发生的率和影响及其他特征，对风险进行优先级排序，从而为后续分析或行动提供基础的过程。</li>
+<li><strong>主要作用</strong>: 重点关注高优先级的风险。本过程需要在整个项目期间开展。</li>
+</ul>
+<!-- <u>**输入**</u> -->
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类目</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>输入</strong></td>
+<td style="text-align: left;">项目管理计划 项目文件 事业环境因素 组织过程资产</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>输出</strong></td>
+<td style="text-align: left;"><strong>项目文件更新</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>技术</strong></td>
+<td style="text-align: left;">专家判断 数据收集 <strong>数据分析</strong> 人际关系与团队技能 风险分类 数据表现 会议</td>
+</tr>
+</tbody>
+</table>
+<p>风险概率和影响评估 风险优先级排序</p>
+<h4 id="156">15.6 实施定量风险分析</h4>
+<ul>
+<li><strong>定义</strong>: 实施定量风险分析是就已识别的单个项目风险和不确定性的其他来源对整体项目目标的影响进行定量分析的过程。</li>
+<li><strong>主要作用</strong>: <ol>
+<li>量化整体项目风险最大可能性;</li>
+<li>提供额外的定量风险信息，以支持风险应对规划本过程并非每个项目必需，但如果采用，它会在整个项目期间持续开展。 </li>
+</ol>
+</li>
+</ul>
+<!-- <u>**输入**</u> -->
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类目</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>输入</strong></td>
+<td style="text-align: left;">项目管理计划 项目文件 事业环境因素 组织过程资产</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>输出</strong></td>
+<td style="text-align: left;"><strong>项目文件更新</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>技术</strong></td>
+<td style="text-align: left;">专家判断 数据收集 人际关系与团队技能 不确定性表现方式 数据分析</td>
+</tr>
+</tbody>
+</table>
+<h4 id="157">15.7 规划风险应付</h4>
+<p>定义: 规划风险的应对措施是为了应对项目风险，而制定可选方案、选择应对策略并商定应对行动的过程。</p>
+<ul>
+<li>主要作用 <ol>
+<li>制定应对整体项目风险和单个项目风险的适当方法</li>
+<li>分配资源，并根据需要将相关活动添加进项目文件和项目管理计划中。本过程需要在整个项目期间开展。</li>
+</ol>
+</li>
+</ul>
+<!-- <u>**输入**</u> -->
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类目</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>输入</strong></td>
+<td style="text-align: left;">项目管理计划 项目文件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>输出</strong></td>
+<td style="text-align: left;">变更请求，项目管理计划更新， <strong>项目文件更新</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>技术</strong></td>
+<td style="text-align: left;">专家判断、数据收集、人际关系与团队技能、威胁应对策略、机会应对策略、应急应对策略、整体项目风险应对策略、数据分析、决策</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="158">15.8 实施风险应付</h4>
+<p>定义: 实施风险应对是执行商定的风险应对计划的过程。</p>
+<ul>
+<li>主要作用: <ol>
+<li>确保按计划执行商定的风险应对措施;</li>
+<li>管理整体项目风险入口、最小化单个项
+目威胁，以及最大化单个项目机会。本过程需要在整个项目期间开展。</li>
+</ol>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类目</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><u><strong>输入</strong></u></td>
+<td style="text-align: left;">项目管理计划 项目文件 组织过程资产</td>
+</tr>
+<tr>
+<td style="text-align: left;"><u><strong>输出</strong></u></td>
+<td style="text-align: left;">请求变更 <strong>项目文件更新</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><u><strong>技术</strong></u></td>
+<td style="text-align: left;">专家判断 人际关系与团队技能 项目管理信息系统</td>
+</tr>
+</tbody>
+</table>
+<p><strong>项目文件更新</strong>： 更新风险登记册 风险报告</p>
+<hr />
+<h4 id="159">15.9 监督风险</h4>
+<ul>
+<li><strong>定义</strong>: 监督风险是在整个项目期间，监督风险应对计划的实施，并跟踪己识别风险、识别和分析新风险
+以及评估风险管理有效性的过程</li>
+<li><strong>主要作用</strong>: 保证项目决策是在整体项目风险和单个项目风险当前信息的基础上进行</li>
+<li>本过程需要在整个项目期间开展。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类目</th>
+<th style="text-align: left;">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><u><strong>输入</strong></u></td>
+<td style="text-align: left;">项目管理计划 项目文件 工作绩效数据 工作绩效报告 组织过程资产更新</td>
+</tr>
+<tr>
+<td style="text-align: left;"><u><strong>输出</strong></u></td>
+<td style="text-align: left;"><strong>工作绩效信息</strong> 变更请求 项目管理计划更新  <strong>项目文件更新</strong> 组织过程资产更新</td>
+</tr>
+<tr>
+<td style="text-align: left;"><u><strong>技术</strong></u></td>
+<td style="text-align: left;">数据分析 审计 会议</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>相关概念</strong><ol>
+<li>储备分析: 比较剩余应急储备与剩余风险量，确定剩余储备是否仍然合理、可以用各种图形(如燃尽图)来显示应急储备的消耗情况。</li>
+<li>风险审计: 用于评估风险<strong style="color: red;">管理过程的有效性</strong>，在实施审计前，应明确定义风险审计的程序和目标</li>
+<li>风险审查会: 检查和记录风险应对在处理整体项目风险和别单个项目风险的有效性识别出新的单个项目风险(包括次生风险)，重新评估当前风险，关闭已过时风险，讨论风险发生所引发的问题，总结经验教训。</li>
+</ol>
+</li>
+</ul>
+<!-- <strong style="color: red;">管理过程的有效性</strong> -->
+
+<h4 id="1510">15.10 管理示例</h4>
+<p>主要风险清单 </p>
+<style>
+table {
+   border-collapse: collapse;  /* 合并两个挨着的单元格之间的边框 */
+}
+
+td, th {
+    border: 0.6px solid black;/* 设置单元格的边框 */
+}
+</style>
+
+<!-- <table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+    </tr>
+</table> -->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../about/project/" class="btn btn-neutral float-left" title="项目介绍"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project-16/" class="btn btn-neutral float-right" title="采购管理">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2022~2024 hollin/All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../about/project/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project-16/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

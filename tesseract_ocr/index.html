@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="benjerming" /><link rel="canonical" href="https://benjerming.github.io/tesseract_ocr/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tesseract ocr - 我的博客</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tesseract ocr";
+        var mkdocs_page_input_path = "tesseract_ocr.md";
+        var mkdocs_page_url = "/tesseract_ocr/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> 我的博客
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">主页</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../android_dl/">Android中动态库加载依赖的方式</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../android_studio_integrate_cmake/">AndroidStusio集成CMake</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../deprecated_debug_pdf2docx/">pdf2docx数据处理流程</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../deprecated_merge_mupdf_2_zjpdf/">合并mupdf和zjpdf</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../deprecated_mupdf_pymupdf_pdf2docx_upgrade/">mupdf_pymupdf_pdf2docx升级</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project_review/">项目上线回溯总结</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Tesseract ocr</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">安装</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">使用</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../todo/">待办事项列表</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/author/">我们</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../about/project/">项目介绍</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Project</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../project/project-15/">项目风险管理</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project/project-16/">采购管理</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">我的博客</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Tesseract ocr</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>OCR功能研究学习</p>
+<h1 id="tesseract-ocr">tesseract-ocr</h1>
+<h2 id="_1">安装</h2>
+<ul>
+<li>
+<p>tesseract：引擎</p>
+</li>
+<li>
+<p>tessdata：训练数据，二选一</p>
+<ul>
+<li>
+<p>tessdata-fast：平衡了速度与准确性的版本【推荐】</p>
+<ul>
+<li>
+<p>osd：用于定向和分段，11MB</p>
+</li>
+<li>
+<p>chi_sim：用于提取简体中文的训练数据，2.4MB</p>
+</li>
+<li>
+<p>eng：用于提取英文的训练数据（默认语言），4.0MB</p>
+</li>
+<li>
+<p>其他</p>
+</li>
+</ul>
+</li>
+<li>
+<p>tessdata-best：牺牲速度换取准确率提升</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">使用</h2>
+<ul>
+<li>
+<p>分辨率：推荐300dpi，测试表明，mupdf默认72dpi提取文字错误率较高</p>
+</li>
+<li>
+<p>语言：必须设置将要提取的语言，语言可以组合，但耗时可能会线性增加</p>
+</li>
+<li>
+<p>训练集：tessdata目录</p>
+</li>
+</ul>
+<h1 id="mupdftesseract-ocr">mupdf集成tesseract-ocr</h1>
+<h2 id="fz_ocr_device">fz_ocr_device</h2>
+<p>提取页面中的文字，<code>fz_ocr_device</code>分两种工作模式，目前默认使用修正文字的工作模式</p>
+<ul>
+<li>
+<p>不使用displaylist（ 一般PDF文件都能良好工作，但无法修复unicode值）：</p>
+<ul>
+<li>
+<p>将页面中的非文本事件转发给用户</p>
+</li>
+<li>
+<p>将页面中的所有事件绘制到灰度图片中</p>
+</li>
+<li>
+<p>当页面关闭时</p>
+<ul>
+<li>
+<p>使用ocr引擎<a href="https://github.com/ArtifexSoftware/mupdf/blob/1.25.2/source/fitz/tessocr.cpp#L231">提取</a>pixmap中的文字</p>
+</li>
+<li>
+<p>设置固定字体<code>Courier</code>（仅支持英文）</p>
+</li>
+<li>
+<p>将识别出的文字通过文本绘制事件转发给用户</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>使用displaylist</p>
+<ul>
+<li>
+<p>将页面中的所有事件保存到distplaylist</p>
+</li>
+<li>
+<p>将页面中的所有事件绘制到灰度图片中</p>
+</li>
+<li>
+<p>当页面关闭时</p>
+<ul>
+<li>
+<p>使用ocr引擎<a href="https://github.com/ArtifexSoftware/mupdf/blob/1.25.2/source/fitz/tessocr.cpp#L231">提取</a>pixmap中的文字</p>
+</li>
+<li>
+<p>使用重写设备重新播放所有事件并转发给用户</p>
+<ul>
+<li>
+<p>播放文字事件时，匹配ocr已提取的文字，修正文字unicode值</p>
+</li>
+<li>
+<p>重写设备使用正确的 Unicode 值重写文本对象</p>
+</li>
+</ul>
+</li>
+<li>
+<p>OCR 识别出的任何字符，如果重写步骤未使用，则将作为不可见文本发送。（因此能够正确完成搜索/复制/剪切操作）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="mudraw">mudraw</h2>
+<p>当输出文件格式包含ocr时，底层使用<code>fz_ocr_device</code>，固定使用displaylist方式。</p>
+<p>代码见<a href="https://github.com/ArtifexSoftware/mupdf/blob/1.25.2/source/tools/mudraw.c#L716">mudraw跟踪使用ocr提取文字过程</a>和 <a href="https://github.com/ArtifexSoftware/mupdf/blob/1.25.2/source/tools/mudraw.c#L852">mudraw使用ocr提取文字</a>。</p>
+<h2 id="fz_write_pixmap_as_pdfocr">fz_write_pixmap_as_pdfocr</h2>
+<p>使用<code>pdfocr_band_writer</code>，将包含文字的图片生成pdf文档，且二值化后生成pixmap，</p>
+<ul>
+<li>
+<p>创建<code>pdfocr_band_writer</code>环境</p>
+<ul>
+<li>
+<p><code>pdfocr_write_header</code></p>
+<ul>
+<li>
+<p>过程填充pdf文件头部信息</p>
+</li>
+<li>
+<p>创建仅alpha通道（二值化）的pixmap</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>pdfocr_write_band</code></p>
+<ul>
+<li>填充pixmap</li>
+</ul>
+</li>
+<li>
+<p><code>pdfocr_write_trailer</code></p>
+<ul>
+<li>
+<p>使用ocr引擎<a href="https://github.com/ArtifexSoftware/mupdf/blob/1.25.2/source/fitz/tessocr.cpp#L231">提取</a>pixmap中的文字</p>
+</li>
+<li>
+<p><code>flush_words</code>将文字写入buffer</p>
+</li>
+<li>
+<p>将buffer以stream形式生成pdf文件的obj对象</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="pymupdfmupdftesseract-ocr">pymupdf使用mupdf的tesseract-ocr功能</h1>
+<p>实质上是调用了<code>fz_write_pixmap_as_pdfocr</code>把图片生成pdf</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project_review/" class="btn btn-neutral float-left" title="项目上线回溯总结"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../todo/" class="btn btn-neutral float-right" title="待办事项列表">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2022~2024 hollin/All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project_review/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../todo/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
